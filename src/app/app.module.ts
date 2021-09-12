@@ -17,20 +17,15 @@ import { AuthService } from './_services/auth.service';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { AlertifyService } from './_services/alertify.service';
-import { MemberListComponent } from './members/member-list/member-list.component';
-import { ListsComponent } from './lists/lists.component';
+ import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import { appRoutes } from './routes';
 import { AuthGuard } from './_guards/auth.guard';
 import { UserService } from './_services/user.service';
-import { MemberCardComponent } from './members/member-card/member-card.component';
-import { MemberDetailComponent } from './members/member-detail/member-detail.component';
-import { MemberDetailResolver } from './_reslovers/member-detail.resolver';
+ import { MemberDetailResolver } from './_reslovers/member-detail.resolver';
 import { MemberListResolver } from './_reslovers/member-list.resolver';
-import { MemberEditComponent } from './members/member-edit/member-edit.component';
-import { MemberEditResolver } from './_reslovers/member-edit.resolver';
+ import { MemberEditResolver } from './_reslovers/member-edit.resolver';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guards';
-import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 
 
 export function tokenGetter(){
@@ -43,14 +38,9 @@ export function tokenGetter(){
       NavComponent,
       HomeComponent,
       RegisterComponent,
-      MemberListComponent,
       ListsComponent,
       MessagesComponent,
-      MemberCardComponent,
-      MemberDetailComponent,
-      MemberEditComponent,
-      PhotoEditorComponent,
-      TimeAgoPipe
+     TimeAgoPipe
    ],
   imports: [
     BrowserModule,
