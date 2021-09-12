@@ -17,7 +17,7 @@ export class PhotoEditorComponent implements OnInit {
 @Output() getMemberPhotoChange = new EventEmitter<string>();
  uploader: FileUploader ;
  hasBaseDropZoneOver = false;
- baseUrl = environment.apiUrl;
+ baseUrl = 'https://firstappwithpostgree.herokuapp.com/api/';
  currentMain: Photo;
 
 

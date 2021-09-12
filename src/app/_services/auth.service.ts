@@ -10,7 +10,7 @@ import { User } from '../_models/user';
   providedIn: 'root'
 })
 export class AuthService {
-  baseUrl = environment.apiUrl+'auth/'
+  baseUrl = 'https://firstappwithpostgree.herokuapp.com/api/auth/'
   // 'https://localhost:44348/api/auth/';
   jwtHelper = new JwtHelperService();
   decodedToken: any;

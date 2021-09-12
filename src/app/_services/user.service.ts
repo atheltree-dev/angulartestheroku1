@@ -17,25 +17,25 @@ import { User } from '../_models/user';
 })
 export class UserService {
 
-  baseUrl = environment.apiUrl;
+  baseUrl = 'https://firstappwithpostgree.herokuapp.com/api/';
 
   constructor(private http : HttpClient) { }
 
   getUsers(page? , itemsPerPage?): Observable<PaginatedResult<User[]>> {
-    const paginatedResult : PaginatedResult<User[]> = new PaginatedResult<User[]>() ; 
-    
+    const paginatedResult : PaginatedResult<User[]> = new PaginatedResult<User[]>() ;
+
     let params = new HttpParams();
-    
+
     if(page !=null && itemsPerPage != null){
        params = params.append('pageNumber' , page);
        params = params.append('pageSize' , itemsPerPage);
-     
+
     }
 
     return this.http.get<User[]>(this.baseUrl + 'users',{ observe: 'response', params})
     .pipe(
       map(response => {
-        paginatedResult.result = response.body; 
+        paginatedResult.result = response.body;
     if(response.headers.get('Pagination') !=null) {
       paginatedResult.pagination = JSON.parse(response.headers.get('Pagination'))
     }
